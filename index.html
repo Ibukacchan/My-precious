@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17150f">
+  <meta name="description" content="A majestic fantasy name picker across four ancient realms.">
+  <title>The Realms — A Name Choosing Journey</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="The Realms home">
+      <span class="brand-mark">✧</span><span>THE REALMS</span>
+    </a>
+    <div class="top-actions">
+      <button id="musicToggle" class="icon-btn" title="Toggle background music" aria-label="Toggle background music">♫ <span id="musicLabel">Music off</span></button>
+      <button id="installBtn" class="icon-btn hidden">＋ Install</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A JOURNEY THROUGH FOUR ANCIENT REALMS</p>
+        <h1>Where names<br><em>meet their fate.</em></h1>
+        <p class="intro">Beyond the mountains, forests, and forgotten roads, an ancient power awaits. Choose a realm, gather your names, and let the Ring decide.</p>
+        <button id="enterBtn" class="gold-button">ENTER THE REALMS <span>✧</span></button>
+        <p class="microcopy">A fantasy-inspired name selection experience</p>
+      </div>
+
+      <div class="map-wrap">
+        <div class="map-frame">
+          <div class="map-heading"><span>✦</span> THE FOUR REALMS <span>✦</span></div>
+          <svg class="realm-map" viewBox="0 0 780 520" role="img" aria-label="An original fantasy map showing four realms: Elves, Hobbits, Dwarves and Men">
+            <defs>
+              <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9b47b"/><stop offset="1" stop-color="#8f8054"/></linearGradient>
+              <pattern id="dots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#6c5b38" opacity=".35"/></pattern>
+            </defs>
+            <path class="continent" d="M93 119 L145 81 205 93 245 64 312 84 365 65 421 95 478 79 530 106 594 96 660 139 684 192 663 237 692 291 653 347 611 385 569 434 509 448 457 427 407 457 350 436 302 455 251 425 196 436 158 394 115 368 92 313 66 268 84 214Z"/>
+            <path d="M93 119 L145 81 205 93 245 64 312 84 365 65 421 95 478 79 530 106 594 96 660 139 684 192 663 237 692 291 653 347 611 385 569 434 509 448 457 427 407 457 350 436 302 455 251 425 196 436 158 394 115 368 92 313 66 268 84 214Z" fill="url(#dots)" opacity=".8"/>
+            <path class="river" d="M205 111 C235 167 197 205 248 242 S301 316 271 381"/>
+            <path class="river" d="M490 112 C452 164 509 201 464 248 S438 340 480 410"/>
+            <path class="mountain" d="M314 123 l25 -42 24 42 20 -31 24 42 21 -29 25 41 -28 8 -23 -22 -22 24 -23 -17 -23 20Z"/>
+            <path class="mountain" d="M520 283 l22 -42 25 42 20 -31 24 42 -25 8 -22 -22 -20 22Z"/>
+            <g class="forest"><path d="M142 210 l-16 29 h11 l-16 25 h42 l-16 -25 h11Z"/><path d="M176 245 l-14 25 h10 l-14 22 h37 l-14 -22 h10Z"/><path d="M125 285 l-15 26 h11 l-14 23 h38 l-14 -23 h10Z"/><path d="M610 161 l-15 26 h11 l-15 24 h38 l-14 -24 h10Z"/></g>
+            <g class="castle"><path d="M555 330 v-34 l12 -12 12 12 v34 h-24 M551 330 h33 v8 h-33Z"/><path d="M561 296 v-14 h5 v14 M574 296 v-14 h5 v14"/></g>
+            <g class="village"><circle cx="218" cy="348" r="10"/><path d="M207 348 l11 -12 11 12Z"/><circle cx="244" cy="365" r="8"/><path d="M235 365 l9 -10 9 10Z"/></g>
+            <g class="mine"><path d="M350 334 l23 -31 23 31Z M357 334 v-18 h32 v18"/></g>
+            <g class="realm-point" data-realm="elves"><circle cx="168" cy="174" r="8"/><text x="168" y="151">ELVENWOOD</text></g>
+            <g class="realm-point" data-realm="hobbits"><circle cx="226" cy="387" r="8"/><text x="226" y="414">THE GREENSHIRE</text></g>
+            <g class="realm-point" data-realm="dwarves"><circle cx="385" cy="353" r="8"/><text x="385" y="380">IRONHALL</text></g>
+            <g class="realm-point" data-realm="men"><circle cx="579" cy="355" r="8"/><text x="579" y="382">CROWNFALL</text></g>
+            <text class="map-label" x="392" y="245">THE OLD ROAD</text>
+            <path class="compass" d="M710 100 l-13 43 13 -8 13 8Z"/><text x="710" y="88" text-anchor="middle">N</text>
+          </svg>
+          <div class="map-footer"><span>✧</span> HERE BE STORIES YET UNTOLD <span>✧</span></div>
+        </div>
+        <div class="map-note">An original map of four imagined territories</div>
+      </div>
+    </section>
+
+    <section id="app" class="app-section hidden">
+      <div class="section-head">
+        <p class="eyebrow">THE JOURNEY BEGINS</p>
+        <h2>Choose your <em>realm.</em></h2>
+        <p>Each people has its own lands, traditions, and atmosphere. Select one realm—or call upon all four.</p>
+      </div>
+
+      <div class="realm-grid">
+        <button class="realm-card elves" data-realm="elves"><span class="realm-symbol">✧</span><span class="realm-name">The Elves</span><span class="realm-sub">Enchanted woodland</span><span class="realm-cta">ENTER REALM →</span></button>
+        <button class="realm-card hobbits" data-realm="hobbits"><span class="realm-symbol">❀</span><span class="realm-name">The Hobbits</span><span class="realm-sub">The green hills</span><span class="realm-cta">ENTER REALM →</span></button>
+        <button class="realm-card dwarves" data-realm="dwarves"><span class="realm-symbol">⚒</span><span class="realm-name">The Dwarves</span><span class="realm-sub">Halls beneath the mountain</span><span class="realm-cta">ENTER REALM →</span></button>
+        <button class="realm-card men" data-realm="men"><span class="realm-symbol">♜</span><span class="realm-name">The Men</span><span class="realm-sub">The kingdoms of men</span><span class="realm-cta">ENTER REALM →</span></button>
+      </div>
+
+      <div class="picker-layout">
+        <section class="panel names-panel">
+          <div class="panel-title"><div><p class="eyebrow">THE GATHERING</p><h3>Names of the realm</h3></div><span id="activeRealmBadge" class="realm-badge">ALL REALMS</span></div>
+          <div class="field-row">
+            <input id="nameInput" type="text" maxlength="50" placeholder="Write a name..." autocomplete="off">
+            <button id="addNameBtn" class="gold-button compact">ADD NAME</button>
+          </div>
+          <div class="field-row secondary-row">
+            <select id="nameRealm" aria-label="Choose race for new name">
+              <option value="elves">Elves</option><option value="hobbits">Hobbits</option><option value="dwarves">Dwarves</option><option value="men">Men</option>
+            </select>
+            <button id="bulkBtn" class="quiet-button">＋ Add many</button>
+            <button id="clearBtn" class="quiet-button">Clear names</button>
+          </div>
+          <textarea id="bulkInput" class="bulk-input hidden" rows="4" placeholder="Paste names here, one name per line..."></textarea>
+          <div class="name-stats"><span id="nameCount">0 names gathered</span><span id="poolLabel">All realms</span></div>
+          <ul id="nameList" class="name-list"><li class="empty-state">Your gathered names will appear here.</li></ul>
+        </section>
+
+        <section class="panel ring-panel">
+          <p class="eyebrow">THE ANCIENT RELIC</p>
+          <h3>The Precious Ring</h3>
+          <p class="ring-intro">The old power stirs. When you are ready, let fate choose.</p>
+          <div id="ringStage" class="ring-stage">
+            <div class="ring-aura"></div><div class="ring-orbit orbit-one"></div><div class="ring-orbit orbit-two"></div>
+            <div class="ring-visual"><div class="ring-band"></div><div class="ring-gem">✧</div></div>
+            <div class="ring-flame flame-one"></div><div class="ring-flame flame-two"></div>
+          </div>
+          <div id="result" class="result-box"><span class="result-kicker">THE RING AWAITS</span><strong id="resultName">No name chosen</strong><span id="resultRace">Add names to begin</span></div>
+          <button id="drawBtn" class="gold-button draw-button">LET THE RING CHOOSE <span>✦</span></button>
+          <div class="draw-options"><label><input id="removeAfter" type="checkbox" checked> Remove chosen name from pool</label><label><input id="multiMode" type="checkbox"> Choose multiple</label></div>
+          <div id="multiCountWrap" class="hidden count-wrap"><label for="multiCount">Number to choose</label><input id="multiCount" type="number" min="1" max="30" value="3"></div>
+        </section>
+      </div>
+
+      <section class="panel group-panel">
+        <div class="panel-title"><div><p class="eyebrow">FELLOWSHIP FORMED</p><h3>Gather the groups</h3></div><span class="realm-badge">GROUP GENERATOR</span></div>
+        <div class="group-controls">
+          <label>Names from<select id="groupRealm"><option value="all">All realms</option><option value="elves">Elves</option><option value="hobbits">Hobbits</option><option value="dwarves">Dwarves</option><option value="men">Men</option></select></label>
+          <label>Number of groups<input id="groupCount" type="number" min="2" max="20" value="4"></label>
+          <button id="groupBtn" class="gold-button compact">FORM GROUPS</button>
+        </div>
+        <div id="groupsOutput" class="groups-output"><p class="empty-state">Your fellowship will appear here.</p></div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-title"><div><p class="eyebrow">THE CHRONICLES</p><h3>Draw history</h3></div><button id="historyClear" class="quiet-button">Clear history</button></div>
+        <ol id="historyList" class="history-list"><li class="empty-state">No names have been chosen yet.</li></ol>
+      </section>
+      <footer class="app-footer"><span>✧</span> ONE RING. FOUR REALMS. MANY DESTINIES. <span>✧</span></footer>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <audio id="bgAudio" src="background.wav" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "The Realms — Fantasy Name Picker",
+  "short_name": "The Realms",
+  "description": "A majestic name picker across four fantasy realms.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#17150f",
+  "theme_color": "#17150f",
+  "orientation": "portrait",
+  "icons": []
+}
